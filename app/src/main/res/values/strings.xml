@@ -72,7 +72,7 @@
     <string name="psycho_education">Psycho Education</string>
     <string name="IADL">Self Reliance</string>
     <string name="psycho_edu_ques">PSychoeducation Questions</string>
-    <string name="team_saksham">Team Saksham</string>
+    <string name="team_saksham">Team DISHA</string>
     <string-array name="questions">
         <item>What is physical health monitoring?</item>
         <item>Why is physical health monitoring important for you?</item>
@@ -1126,7 +1126,7 @@ The common signs and symptoms of the illness are: </li>\n
 
     <string name="consent_string"> Disclaimer \n \n
 
--	I have understood the functioning of mobile app Saksham and I have agreed to use it for three months. After three months, I will return the smartphone to the research team at AIIMS.\n\n
+-	I have understood the functioning of mobile app DISHA and I have agreed to use it for three months. After three months, I will return the smartphone to the research team at AIIMS.\n\n
 -	I have understood that all the information entered by me and the images stored by me in the app will be kept confidential and secure.\n\n
 -	I have understood that the information entered by me in the app and images stored by me in the app can be used for research purposes. My personal information or identifying information will never be used on any forum.\n\n
 -	I have agreed that this app is NOT a replacement of the ongoing treatment at AIIMS. The app is in addition to the usual treatment services provided at AIIMS.\n\n
@@ -1241,8 +1241,8 @@ Ansari Nagar, New Delhi -110029\n
 
 If the information in Part 1 has interested you and you are considering participation, please read the additional information in Part 2 before making any decision.\n\n
 PART 2\n\n
-About the ‘Saksham’ App-\n
-●	You and your ward will be given a smartphone that has the app ‘Saksham’ uploaded on it. There are 4 modules in this app, which are medication adherence, daily routine, psycho-education and my day. Each module has information section that you can read to know more about the particular area that the module is about.\n\n
+About the ‘DISHA’ App-\n
+●	You and your ward will be given a smartphone that has the app ‘DISHA’ uploaded on it. There are 4 modules in this app, which are medication adherence, daily routine, psycho-education and my day. Each module has information section that you can read to know more about the particular area that the module is about.\n\n
 ●	You will also receive some notification for medication adherence and daily routine of your ward during the week.  You can check the information and verify it in the module.\n\n
 ●	In the module ‘My day’ you can enter some information about you.\n\n
 ●	Investigator or one of the study team members will explain you how to fill up the information.\n\n

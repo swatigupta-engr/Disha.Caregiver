@@ -112,6 +112,7 @@
             android:theme="@style/Theme.AppCompat.Dialog" />
         <activity android:name=".activities.UserProfileActivity" />
         <activity android:name=".activities.BeginAgainActivity"></activity>
+        <activity android:name=".activities.PDFRenderActivity"></activity>
     </application>
 
 </manifest>

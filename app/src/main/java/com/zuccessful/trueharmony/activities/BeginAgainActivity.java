@@ -1,6 +1,7 @@
 package com.zuccessful.trueharmony.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -35,12 +36,18 @@ public class BeginAgainActivity extends AppCompatActivity implements AddActivity
                     fragmentTransaction.replace(R.id.fragment_content, new BegainAgainReport()).commit();
                     return true;
                 case R.id.navigation_dashboard:
-                    PdfRenderFragment p= new PdfRenderFragment();
+                   /* PdfRenderFragment p= new PdfRenderFragment();
                     Bundle bundle = new Bundle();
                     bundle.putString("filename", "daily_routine.pdf");
                     bundle.putString("filename_hindi", "daily_routine_hindi.pdf");
                     p.setArguments(bundle);
-                    fragmentTransaction.replace(R.id.fragment_content, p).commit();
+                    fragmentTransaction.replace(R.id.fragment_content, p).commit();*/
+
+                    Intent pIntent = new Intent(BeginAgainActivity.this, PDFRenderActivity.class);
+                    pIntent.putExtra("filename","daily_routine.pdf");
+                    pIntent.putExtra("filename_hindi","daily_routine_hindi.pdf");
+
+                    startActivity(pIntent);
                     return true;
                 case R.id.navigation_notifications:
                     // fragmentTransaction.replace(R.id.fragment_content, new ActivityStatsFrag()).commit();

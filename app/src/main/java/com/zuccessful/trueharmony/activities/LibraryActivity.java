@@ -63,34 +63,51 @@ public class LibraryActivity extends AppCompatActivity {
         diet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PdfRenderFragment p= new PdfRenderFragment();
+        /*        PdfRenderFragment p= new PdfRenderFragment();
                 Intent i= new Intent(getApplicationContext(),LibraryPDF.class);
                 i.putExtra("filename","diet.pdf");
                 i.putExtra("filename_hindi","eating_right_hindi.pdf");
 
-                startActivity(i);
+                startActivity(i);*/
+
+                Intent pIntent = new Intent(LibraryActivity.this, PDFRenderActivity.class);
+                pIntent.putExtra("filename","diet.pdf");
+                pIntent.putExtra("filename_hindi","eating_right_hindi.pdf");
+
+                startActivity(pIntent);
             }
         });
         physical.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                PdfRenderFragment p= new PdfRenderFragment();
+                /*PdfRenderFragment p= new PdfRenderFragment();
                 Intent i= new Intent(getApplicationContext(),LibraryPDF.class);
                 i.putExtra("filename","physical.pdf");
                 i.putExtra("filename_hindi","physical_activity_hindi.pdf");
-                startActivity(i);
+                startActivity(i);*/
+                Intent pIntent = new Intent(LibraryActivity.this, PDFRenderActivity.class);
+                pIntent.putExtra("filename","physical.pdf");
+                pIntent.putExtra("filename_hindi","physical_activity_hindi.pdf");
+
+                startActivity(pIntent);
             }
         });
 
         health.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PdfRenderFragment p= new PdfRenderFragment();
+               /* PdfRenderFragment p= new PdfRenderFragment();
                 Intent i= new Intent(getApplicationContext(),LibraryPDF.class);
                 i.putExtra("filename","health.pdf");
                 i.putExtra("filename_hindi","health_monitoring_hindi.pdf");
-                startActivity(i);
+                startActivity(i);*/
+
+                Intent pIntent = new Intent(LibraryActivity.this, PDFRenderActivity.class);
+                pIntent.putExtra("filename","health.pdf");
+                pIntent.putExtra("filename_hindi","health_monitoring_hindi.pdf");
+
+                startActivity(pIntent);
 
             }
         });

@@ -24,7 +24,7 @@ public class LibraryPDF extends AppCompatActivity {
             }catch (Exception e){}
             pdfName_hindi=i.getStringExtra("filename_hindi");
             FragmentManager fragmentManager = getSupportFragmentManager();
-            final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+           /* final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             PdfRenderFragment p= new PdfRenderFragment();
             Bundle bundle = new Bundle();
             try {
@@ -33,7 +33,13 @@ public class LibraryPDF extends AppCompatActivity {
             bundle.putString("filename_hindi",pdfName_hindi);
 
             p.setArguments(bundle);
-            fragmentTransaction.replace(R.id.fragment_content, p).commit();
+            fragmentTransaction.replace(R.id.fragment_content, p).commit();*/
+
+            Intent pIntent = new Intent(LibraryPDF.this, PDFRenderActivity.class);
+            pIntent.putExtra("filename",pdfName);
+            pIntent.putExtra("filename_hindi",pdfName_hindi);
+
+            startActivity(pIntent);
         }
 
     }

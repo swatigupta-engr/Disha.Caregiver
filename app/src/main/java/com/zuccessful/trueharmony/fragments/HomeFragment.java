@@ -18,6 +18,7 @@ import com.zuccessful.trueharmony.activities.HealthMonitorActivity;
 import com.zuccessful.trueharmony.activities.Injection_Schedule;
 import com.zuccessful.trueharmony.activities.MedicalAdherenceActivity;
 import com.zuccessful.trueharmony.activities.MyDayActivity;
+import com.zuccessful.trueharmony.activities.PDFRenderActivity;
 import com.zuccessful.trueharmony.activities.PSychoeducation;
 import com.zuccessful.trueharmony.activities.Report;
 import com.zuccessful.trueharmony.pojo.DailyRoutine;
@@ -78,7 +79,13 @@ public class HomeFragment extends Fragment {
         mPsychoEduCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getContext(), PSychoeducation.class));
+               // startActivity(new Intent(getContext(), PSychoeducation.class));
+                Intent pIntent = new Intent(getContext(), PDFRenderActivity.class);
+                pIntent.putExtra("filename","about_illness.pdf");
+                pIntent.putExtra("filename_hindi","health_monitoring_hindi.pdf");
+
+                startActivity(pIntent);
+
                 sendMapAnalytics(FirebaseAnalyticsHelper.FirebaseAnalyConst.ACTIVITY_NAME,
                         getString(R.string.psycho_education));
 

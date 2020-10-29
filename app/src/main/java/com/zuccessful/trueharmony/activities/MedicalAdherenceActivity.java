@@ -1,5 +1,6 @@
 package com.zuccessful.trueharmony.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -38,7 +39,7 @@ public class MedicalAdherenceActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_dashboard:
                     //putting extra info to fragment
-                    Bundle bundle = new Bundle();
+                  /*  Bundle bundle = new Bundle();
                     ArrayList<String> questions = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.med_adh_que)));
                     bundle.putStringArrayList("questions", questions);
                     ArrayList<String> answers = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.med_adh_ans)));
@@ -49,6 +50,14 @@ public class MedicalAdherenceActivity extends AppCompatActivity {
                     InformationFragment infoFrag = new InformationFragment();
                     infoFrag.setArguments(bundle);
                     fragmentTransaction.replace(R.id.fragment_content, infoFrag).commit();
+*/
+
+                    Intent pIntent = new Intent(MedicalAdherenceActivity.this, PDFRenderActivity.class);
+                    pIntent.putExtra("filename","medical_adherence.pdf");
+                    pIntent.putExtra("filename_hindi","medical_adherence_hindi.pdf");
+
+                    startActivity(pIntent);
+
                     return true;
                 case R.id.navigation_notifications:
                     fragmentTransaction.replace(R.id.fragment_content, new MedStatsFrag()).commit();

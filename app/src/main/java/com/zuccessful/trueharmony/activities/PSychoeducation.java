@@ -1,5 +1,6 @@
 package com.zuccessful.trueharmony.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -49,7 +50,7 @@ public class PSychoeducation extends AppCompatActivity {
 
         // specify an adapter (see also next example)
         mAdapter = new PsychoAdapter(psychoQueDataset,this);
-        mRecyclerView.setAdapter(mAdapter);*/
+        mRecyclerView.setAdapter(mAdapter);*//*
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         PdfRenderFragment p= new PdfRenderFragment();
@@ -58,7 +59,13 @@ public class PSychoeducation extends AppCompatActivity {
         bundle.putString("filename_hindi","health_monitoring_hindi.pdf");
 
         p.setArguments(bundle);
-        fragmentTransaction.replace(R.id.fragment_content, p).commit();
+        fragmentTransaction.replace(R.id.fragment_content, p).commit();*/
+
+        Intent pIntent = new Intent(PSychoeducation.this, PDFRenderActivity.class);
+        pIntent.putExtra("filename","about_illness.pdf");
+        pIntent.putExtra("filename_hindi","health_monitoring_hindi.pdf");
+
+        startActivity(pIntent);
 
 //        Bundle bundle = new Bundle();
 //        ArrayList<String> questions = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.psycho_edu_que)));
